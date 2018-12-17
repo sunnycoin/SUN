@@ -178,6 +178,9 @@ public:
     // Thread pool configuration
     std::size_t                 WORKERS = 0;
 
+    // Genesis account configuration
+    std::string                 GENESIS_PASSPHRASE;
+
     // These override the command line client settings
     boost::optional<beast::IP::Endpoint> rpc_ip;
 

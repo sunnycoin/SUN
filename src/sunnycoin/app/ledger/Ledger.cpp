@@ -194,8 +194,8 @@ Ledger::Ledger (
     info_.closeTimeResolution = ledgerDefaultTimeResolution;
 
     static auto const id = calcAccountID(
-        generateKeyPair(KeyType::secp256k1,
-            generateSeed("anothermasterpassphrase")).first);
+            generateKeyPair(KeyType::secp256k1,
+                    generateSeed(config.GENESIS_PASSPHRASE)).first);
     auto const sle = std::make_shared<SLE>(keylet::account(id));
     sle->setFieldU32 (sfSequence, 1);
     sle->setAccountID (sfAccount, id);

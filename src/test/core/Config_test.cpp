@@ -393,12 +393,17 @@ port_wss_admin
 
 [ssl_verify]
 0
+
+[genesis_passphrase]
+masterpassphrase
 )sunnycoinConfig");
 
         c.loadFromString (toLoad);
 
         BEAST_EXPECT(c.legacy ("ssl_verify") == "0");
         expectException ([&c] {c.legacy ("server");});  // not a single line
+
+        BEAST_EXPECT(c.legacy ("genesis_passphrase") == "masterpassphrase");
 
         // set a legacy value
         BEAST_EXPECT(c.legacy ("not_in_file") == "");

@@ -418,6 +418,8 @@ void Config::loadFromString (std::string const& fileContents)
     if (getSingleSection (secConfig, SECTION_WORKERS, strTemp, j_))
         WORKERS      = beast::lexicalCastThrow <std::size_t> (strTemp);
 
+    getSingleSection (secConfig, SECTION_GENESIS_PASSPHRASE, GENESIS_PASSPHRASE, j_);
+
     // Do not load trusted validator configuration for standalone mode
     if (! RUN_STANDALONE)
     {
