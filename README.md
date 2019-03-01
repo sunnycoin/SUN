@@ -53,4 +53,5 @@ git-subtree. See those directories' README files for more details.
 * [Setup and Installation](https://developers.sunnycoin.com/install-sunnycoind.html)
 
 To learn about how SUNNYCoin is transforming global payments, visit
-<https://sunnycoin.com/contact/>.
+<https://sunnycoin.io/>.
+
