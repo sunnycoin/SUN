@@ -1,0 +1,6 @@
+
+codecov:
+  ci:
+    - ci.ops.sunnycoin.com  # add custom jenkins server
+    - !appveyor
+    - !travis
