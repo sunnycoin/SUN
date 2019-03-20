@@ -1,0 +1,14 @@
+[Unit]
+Description=Sun Daemon
+
+[Service]
+Type=simple
+ExecStart=/opt/sun/bin/sunnycoind --silent --conf /etc/opt/sun/sunnycoind.cfg
+# Default KillSignal can be used if/when sunnycoind handles SIGTERM
+KillSignal=SIGINT
+Restart=no
+User=sunnycoind
+Group=sunnycoind
+
+[Install]
+WantedBy=multi-user.target
